@@ -1,6 +1,6 @@
-name: rollingstock-seating-reservation
+name: developer-portal
 version: ~
 
-title: Seating Reservation
+title: Developer Portal
 nav:
   - modules/ROOT/nav.adoc
