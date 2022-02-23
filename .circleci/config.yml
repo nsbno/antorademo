@@ -1,0 +1,84 @@
+version: 2.1
+orbs:
+  stepfunction-ci: vydev/ciorb@2.0.5
+# Local parameters can be used to avoid repetitive values (referenced as `<< pipeline.parameters.parameter-name >>`)
+parameters:
+  s3_bucket_name:
+    type: string
+    default: "125515308255-pipeline-artifact"
+  pipeline_name:
+    type: string
+    default: "rollingstock-delivery-pipeline"
+  deployment_repo:
+    type: string
+    default: "rollingstock-aws"
+  deployment_branch:
+    type: string
+    default: "master"
+  ecr_repo_name:
+    type: string
+    default: "rollingstock-seating-reservation"
+  ecr_endpoint:
+    type: string
+    default: "125515308255.dkr.ecr.eu-west-1.amazonaws.com"
+
+jobs:
+  gradle-build:
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "build.gradle.kts" }}
+      - run: gradle clean test build
+      - save_cache:
+          paths:
+            - ~/.gradle
+          key: dependencies-{{ checksum "build.gradle.kts" }}
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build
+    docker:
+      - image: cimg/openjdk:16.0
+        environment:
+          TEST_DATABASE_URL: postgresql://localhost:5432/circle_test
+          TEST_DATABASE_USER: postgres
+      - image: circleci/postgres:12-alpine-ram
+
+workflows:
+  build:
+    jobs:
+      - gradle-build:
+          context:
+            - rollingstock
+            - nexus
+      - stepfunction-ci/build-repo-zip:
+          context: rollingstock
+          s3_bucket_name: << pipeline.parameters.s3_bucket_name >>
+      - stepfunction-ci/build-docker:
+          context:
+            - rollingstock
+          ecr_repo_name: << pipeline.parameters.ecr_repo_name >>
+          ecr_endpoint: << pipeline.parameters.ecr_endpoint >>
+          requires:
+            - gradle-build
+      - stepfunction-ci/upload-artifacts:
+          context:
+            - rollingstock
+            - nexus
+          s3_bucket_name: << pipeline.parameters.s3_bucket_name >>
+          requires:
+            - stepfunction-ci/build-repo-zip
+            - stepfunction-ci/build-docker
+      - stepfunction-ci/upload-trigger-event:
+          context:
+            - rollingstock
+          s3_bucket_name: << pipeline.parameters.s3_bucket_name >>
+          pipeline_name: << pipeline.parameters.pipeline_name >>
+          deployment_repo: << pipeline.parameters.deployment_repo>>
+          deployment_branch: << pipeline.parameters.deployment_branch >>
+          requires:
+            - stepfunction-ci/upload-artifacts
+          filters:
+            branches:
+              only: master
