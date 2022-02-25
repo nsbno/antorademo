@@ -6,10 +6,15 @@ These are various services that exist in our org!
 
 [.grid]
 xref:rollingstock-seating-reservation::index.adoc[Seating Reservation]::
-Reserve seats and stuff
+Seat Reservations
 
-Secret Service::
-Other stuff
+xref:trafficcontrol-message-adapter-siri::index.adoc[Trafficcontrol message adapter siri]::
+This service sends SIRI formatted ET and SX messages to active subscribers.
 
-Not So Secret Service::
-Other stuff
+xref:trafficinfo-reasoncodes::index.adoc[Trafficinfo reasoncodes]::
+Microservice written in Micronaut, using SQS queue for messaging and Postgresql for persisting message records.
+
+Purpose
+Consume reason code messages from tios and utin.
+Persist messages to repository.
+Serve reason codes via api.
