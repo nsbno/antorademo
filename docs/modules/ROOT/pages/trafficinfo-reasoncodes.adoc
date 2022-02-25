@@ -1,0 +1,4 @@
+= trafficinfo-reasoncodes
+
+:page-layout: swagger
+:page-swagger-url: https://petstore.swagger.io/v2/swagger.json
