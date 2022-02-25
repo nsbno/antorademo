@@ -23,7 +23,7 @@ https://vy.statuspage.io/
 (Siden krever vy bruker)
 
 
-For oversikt team medlemer
+For oversikt over team medlemer
 https://vygruppen.atlassian.net/wiki/spaces/VyDev/pages/3636174855/Organisering+av+utvikling
 (Siden krever vy bruker)
 
