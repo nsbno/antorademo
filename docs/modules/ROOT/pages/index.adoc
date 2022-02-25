@@ -1,6 +1,6 @@
 = Home
 
-Welcome to the Vy documentation!
+Welcome to the Vy Developer Portal!
 
 [.panel]
 == xref:services.adoc[]
@@ -11,12 +11,9 @@ These pages typically include a description of the available services and their 
 [.panel]
 == Writing documentation
 
-A bunch of info about writing documentation
+This page gives an overview of APIs VY provides.
 
-== Navigating the documentation
-
-Here is a bunch of info about navigating this documentation.
-
-* Search
-* Components
-* Stuff
+* Home
+* Services
+* Authentication
+* How to add service
