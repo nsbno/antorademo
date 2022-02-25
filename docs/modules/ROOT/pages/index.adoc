@@ -1,0 +1,22 @@
+= Home
+
+Welcome to the Vy documentation!
+
+[.panel]
+== xref:services.adoc[]
+
+A list of all services.
+These pages typically include a description of the available services and their API reference.
+
+[.panel]
+== Writing documentation
+
+A bunch of info about writing documentation
+
+== Navigating the documentation
+
+Here is a bunch of info about navigating this documentation.
+
+* Search
+* Components
+* Stuff

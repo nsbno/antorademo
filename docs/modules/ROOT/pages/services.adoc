@@ -1,0 +1,15 @@
+= Services
+
+These are various services that exist in our org!
+
+== Directory
+
+[.grid]
+xref:rollingstock-seating-reservation::index.adoc[Seating Reservation]::
+Reserve seats and stuff
+
+Secret Service::
+Other stuff
+
+Not So Secret Service::
+Other stuff
