@@ -16,4 +16,4 @@ This page gives an overview of APIs VY provides and is subdivided into.
 * xref:index.adoc[]
 * xref:services.adoc[]
 * xref:authentication.adoc[]
-* xref:howto.adoc[]
+* xref:howto.adoc[How to add service]

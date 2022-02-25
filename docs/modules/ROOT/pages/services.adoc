@@ -5,13 +5,13 @@ These are various services that exist in our org!
 == Directory
 
 [.grid]
-xref:rollingstock-seating-reservation::index.adoc[Seating Reservation]::
+xref:rollingstock-seating-reservation.adoc[Seating Reservation]::
 Seat Reservations
 
-xref:trafficcontrol-message-adapter-siri::index.adoc[Trafficcontrol message adapter siri]::
+xref:trafficcontrol-message-adapter-siri.adoc[Trafficcontrol message adapter siri]::
 This service sends SIRI formatted ET and SX messages to active subscribers.
 
-xref:trafficinfo-reasoncodes::index.adoc[Trafficinfo reasoncodes]::
+xref:trafficinfo-reasoncodes.adoc[Trafficinfo reasoncodes]::
 Microservice written in Micronaut, using SQS queue for messaging and Postgresql for persisting message records.
 
 Purpose
