@@ -6,9 +6,8 @@ Ved spørsmål eller utfordringer så er det bare å ta kontakt med #team-infras
 
 == Guide
 
-[.grid]
-
-
+[.terraform]
+....
 module "service_documentation" {
   source = "https://github.com/nsbno/developer-portal-delegated"
 
@@ -27,3 +26,4 @@ module "service_documentation" {
   growthmetric = "transaction count"
   aktivitetskode = "123533"
 }
+....
