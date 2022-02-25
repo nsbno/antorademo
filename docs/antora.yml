@@ -4,6 +4,9 @@ version: ~
 title: Developer Portal
 nav:
   - modules/ROOT/nav.adoc
+ui:
+  bundle:
+     url: ./../build/ui-bundle.zip
 asciidoc:
   extensions:
     - extensions/swagger-ui-api-gateway.js
