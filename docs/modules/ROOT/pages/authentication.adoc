@@ -1,2 +1,144 @@
 = Authentication
 
+What's a Token and what is it meant for?
+There is three types of tokens described in the OAuth2 and OpenID Connect standard, they have all different use cases described more in detail below for each token type.
+
+Access Token
+ID Token
+Refresh Token
+
+Format of a token
+Consist of three parts
+
+Header of used crypto to verify signature
+
+Payload with claims
+
+Signatur to verify token data integrity
+
+Used for
+
+Authorization
+
+Authentication
+
+Access to Resource Servers
+
+
+jwt
+
+Access Token
+The Access Token is meant for the client to provide a proof of that the current request has an authenticated user to the Resource Server. As such, the token is Completely opaque to clients and should not care about the contents of the token as it is only intended for the Resource Server. The Resource Server however can do whatever it want with the token. Its format and content, if any at all, is an implementation detail known by the creator of the token, and the receiving Resource Server. The client that retrieved the token should not need to parse or validate the token, it should be sent to the Resource Server to get access.
+
+The Access Token does not contain any information about the user except for the user ID (located in the sub claim), it also contains authorization information about the actions that the client is allowed to perform at the API (such permissions are referred to as scopes). If the calling service need to have some information about the current authenticated user it should request a ID Token in addition to the Access Token. For information about the user  profile, see the ID Token below.
+
+Treat the Access Token as temporary credentials to get access to a remote service, do not publish it, put on url paths and other stuff you wouldnt to with username and passwords.
+
+
+
+I.e,
+
+Use the content of the Access Token to make authorization decisions in the your microservice aka. Resource Server.
+Use scopes to define custom permissions for the Resource Server and check for the scopes in your code to do fine grained access control.
+API Gateway application shouldn't do anything with the Access Token if you want to be 100% spec. compliant, it should forward the Authorization header as is.
+The Access Token is meant for the target Resource Server and it can do whatever it wants with it.
+
+
+Example Access Token (payload part) decoded.
+
+An example of machine to machine token, retrieved using client-credentials.
+
+Important fields to note in the payload is
+
+sub is the userid to the logged in user, when client-credentials this is the same as the client_id of the Application Client.
+scope contains all requested/available scopes for the application client, default is all available for the client.
+exp is the expire time for the token.
+
+{
+  "sub": "77ie68jl8ldfg6nih0bhcbn79g",
+  "token_use": "access",
+  "scope": "https://services.trafficinfo.vydev.io/fillrate/prediction",
+  "auth_time": 1579765712,
+  "iss": "https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_batNx5RPC",
+  "exp": 1579769312,
+  "iat": 1579765712,
+  "version": 2,
+  "jti": "0c0b6bf1-942e-4958-a8c6-b5d60ec28745",
+  "client_id": "77ie68jl8ldfg6nih0bhcbn79g"
+}
+
+
+
+An example of end user access token logged in by the Application Client Login Portal iwth a user from the User Pool.
+
+Important fields to note in the payload is
+
+sub is the unique id to the user in the User Pool
+client_id is still the Application Client to which the user has logged in to.
+username is the username from the User Pool
+exp is the expire time for the token.
+
+
+{
+  "sub": "2b45c1f8-ddea-4538-a761-138b776826b7",
+  "token_use": "access",
+  "scope": "https://services.dev.trafficinfo.vydev.io/baseline-micronaut/read",
+  "auth_time": 1592484475,
+  "iss": "https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_t3uhWZYm9",
+  "exp": 1592488075,
+  "iat": 1592484475,
+  "version": 2,
+  "jti": "4b9af320-54dd-4ef2-88d1-8e152fcfe6fa",
+  "client_id": "3rnl2hmojmorahunaufppvvbs4",
+  "username": "daniel"
+}
+
+
+
+ID Token
+The id token is used to read information about the user, it could be thought of as the user profile of the user.
+It contains different user information about the user depending on the source of the user profile. For example if the user has been logged in by federated login to Google it could include fields like nickname, profile picture url, fullname and much more depending on what the user shares. It is not meant to be shared by any other application than the application that called /oauth/token endpoint to retrieve it, as can be seen by the "aud" field in the payload.
+
+
+
+Example ID Token (payload part) decoded.
+
+Important fields to note in the payload is
+
+sub is the unique id to the user in the User Pool
+client_id is still the Application Client to which the user has logged in to.
+aud is the clientId that retrieved the user to show that this token is intended for the application that retrieved it and no one else.
+at_hash is the hash of the Access Token retrieved at the same time as the ID Token.
+
+exp is the expire time for the token.
+
+{
+  "at_hash": "PuiQz2WTQofI93U4kfB19A",
+  "sub": "2b45c1f8-ddea-4538-a761-138b776826b7",
+  "email_verified": true,
+  "iss": "https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_t3uhWZYm9",
+  "phone_number_verified": true,
+  "cognito:username": "daniel",
+  "aud": "3rnl2hmojmorahunaufppvvbs4",
+  "token_use": "id",
+  "auth_time": 1592484475,
+  "phone_number": "+4795111584",
+  "exp": 1592488075,
+  "iat": 1592484475,
+  "email": "daniel@engfeldt.net"
+}
+
+
+
+
+
+Refresh Token
+You can use the refresh token to retrieve new ID and access tokens. By default, the refresh token expires 30 days after your app user signs in to your user pool. When you create an app for your user pool, you can set the app's refresh token expiration to any value between 60 minutes and 10 years.
+
+
+
+Reference
+Access token specification https://tools.ietf.org/html/rfc6749#section-1.4
+Refresh Token specification https://tools.ietf.org/html/rfc6749#section-1.5
+ID Token specification https://openid.net/specs/openid-connect-core-1_0.html#CodeIDToken
+Using tokens https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-with-identity-providers.html
