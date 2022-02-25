@@ -9,11 +9,11 @@ A list of all services.
 These pages typically include a description of the available services and their API reference.
 
 [.panel]
-== Writing documentation
+== Summary
 
-This page gives an overview of APIs VY provides.
+This page gives an overview of APIs VY provides and is subdivided into.
 
-* Home
-* Services
-* Authentication
-* How to add service
+* xref:index.adoc[]
+* xref:services.adoc[]
+* xref:authentication.adoc[]
+* xref:howto.adoc[]
