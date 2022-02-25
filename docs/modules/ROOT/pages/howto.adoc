@@ -1,15 +1,29 @@
 = HowTo
 
-These are various services that exist in our org!
+Tjenester blir lagt inn her hvis de har definert service_documentation modulen i applikasjonsrepoet
 
-== Directory
+Ved spørsmål eller utfordringer så er det bare å ta kontakt med #team-infrastruktur-public på slack
+
+== Guide
 
 [.grid]
-xref:rollingstock-seating-reservation::index.adoc[Seating Reservation]::
-Reserve seats and stuff
 
-Secret Service::
-Other stuff
 
-Not So Secret Service::
-Other stuff
+module "service_documentation" {
+  source = "https://github.com/nsbno/developer-portal-delegated"
+
+  applicationname = ${var.name_prefix}
+  slack = "#team-kjøretøy"
+
+  api_gateway_arn = "arn:aws:1234"
+  # OR
+  swagger_file = file("./test.openapi.yaml")
+
+  about_file = file("./docs/about.adoc")
+  
+  owner = "budgetowner"@vy.no
+  technicalowner = "tekniskowner"@vy.no
+  servicesla = "99.8"
+  growthmetric = "transaction count"
+  aktivitetskode = "123533"
+}
