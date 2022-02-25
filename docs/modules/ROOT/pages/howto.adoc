@@ -6,6 +6,8 @@ Ved spørsmål eller utfordringer så er det bare å ta kontakt med #team-infras
 
 == Guide
 
+Kode snippet som må legges inn
+
 [.terraform]
 ....
 module "service_documentation" {
