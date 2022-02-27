@@ -5,6 +5,9 @@ These are various services that exist in our org!
 == Directory
 
 [.grid]
+xref:trafficinfo-utin-adapter.adoc[Utin Adapter]::
+Utin Adapter
+
 xref:rollingstock-seating-reservation.adoc[Seating Reservation]::
 Seat Reservations
 
