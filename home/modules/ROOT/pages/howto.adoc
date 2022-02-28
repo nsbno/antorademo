@@ -1,4 +1,4 @@
-= How add service
+= How to add service
 
 Services will be added on this page if the following service_documentation modile is added to the application repo and it is part of the nsbno org
 
