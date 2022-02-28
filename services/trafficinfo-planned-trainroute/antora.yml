@@ -1,7 +1,7 @@
-name: trafficinfo-utin-adapter
+name: trafficinfo-planned-trainroute
 version: ~
 
-title: Utin Adapter
+title: Planned Trainroute
 
 nav:
   - modules/ROOT/nav.adoc
