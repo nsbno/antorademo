@@ -1,12 +1,12 @@
-= HowTo
+= How add service
 
-Tjenester blir lagt inn her hvis de har definert service_documentation modulen i applikasjonsrepoet
+Services will be added on this page if the following service_documentation modile is added to the application repo and it is part of the nsbno org
 
-Ved spørsmål eller utfordringer så er det bare å ta kontakt med #team-infrastruktur-public på slack
+For any questions please contact us on the slack channel #team-infrastruktur-public
 
 == Guide
 
-Kode snippet som må legges inn
+Code snippet to be added
 
 [.terraform]
 ....
