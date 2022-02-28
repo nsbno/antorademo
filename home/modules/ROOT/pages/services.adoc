@@ -18,6 +18,12 @@ xref:trafficinfo-reasoncodes::index.adoc[]::
 Microservice written in Micronaut, using SQS queue for messaging and Postgresql for persisting message records.
 
 xref:trafficinfo-trainroute::index.adoc[]::
-Trainroutes
+This project serves as a baseline when you wish to begin a new micro service exposing HTTP endpoints using Micronaut
+
+xref:trafficinfo-operating-trainroute::index.adoc[]::
+Microservice that provides current operating train route information about +-1 day of train routes and stops.
+
+xref:trafficinfo-planned-trainroute::index.adoc[]::
+Keeps a copy of the current trainplan (current term only)
 
 
