@@ -2,7 +2,7 @@
 
 What's a Token and what is it meant for?
 There is three types of tokens described in the OAuth2 and OpenID Connect standard, they have all different use cases described more in detail below for each token type.
-[square]
+
 * Access Token
 * ID Token
 * Refresh Token
@@ -15,9 +15,10 @@ Consist of three parts
 * Signatur to verify token data integrity
 
 Used for
-*Authorization
-*Authentication
-*Access to Resource Servers
+
+* Authorization
+* Authentication
+* Access to Resource Servers
 
 Access Token
 The Access Token is meant for the client to provide a proof of that the current request has an authenticated user to the Resource Server. As such, the token is Completely opaque to clients and should not care about the contents of the token as it is only intended for the Resource Server. The Resource Server however can do whatever it want with the token. Its format and content, if any at all, is an implementation detail known by the creator of the token, and the receiving Resource Server. The client that retrieved the token should not need to parse or validate the token, it should be sent to the Resource Server to get access.
