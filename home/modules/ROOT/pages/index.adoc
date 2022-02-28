@@ -25,3 +25,6 @@ An overview of the curent and past operational status of our services.
 link:https://vygruppen.atlassian.net/wiki/spaces/VyDev/pages/3636174855/Organisering+av+utvikling[Team Overview]::
 See which teams Vy have and who are a member of these teams.
 This is an internal resource, and requires a Vy user.
+
+link:https://vygruppen.atlassian.net/wiki/spaces/INFRA/pages/6379864114/Service+Overview[Service Overview]::
+Service overview with details about ownership, contact information and service information
