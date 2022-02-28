@@ -1,2 +1,5 @@
 * xref:ROOT:index.adoc[]
 * xref:ROOT:api.adoc[]
+
+.External References
+* link:https://example.com[Internal Docs]
