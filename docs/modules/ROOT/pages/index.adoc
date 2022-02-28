@@ -1,31 +1,27 @@
 = Home
 
 Welcome to the Vy Developer Portal!
+Here you can find a variety of information about our APIs and how to use them.
 
 [.panel]
 == xref:services.adoc[]
 
-A list of all services.
-These pages typically include a description of the available services and their API reference.
+A comprehensive list of all services available for use.
+This gives you a complete overview over the services and their endpoints.
 
 [.panel]
-== Summary
+== xref:authentication.adoc[]
 
-This page gives an overview of APIs VY provides and is subdivided into.
+Learn how to authenticate with xref:services.adoc[our services] by using OAuth!
 
-* xref:index.adoc[]
-* xref:services.adoc[]
-* xref:authentication.adoc[]
-* xref:howto.adoc[How to add service]
+== Learn more about the services
 
-For oversikt over tjeneste tilgjenglighet
-https://vy.statuspage.io/
-(Siden krever vy bruker)
+Additional resources can also be found to learn more about our services and their status.
 
+[.grid]
+link:https://vy.statuspage.io/[Statuspage]::
+An overview of the curent and past operational status of our services.
 
-For oversikt over team medlemer
-https://vygruppen.atlassian.net/wiki/spaces/VyDev/pages/3636174855/Organisering+av+utvikling
-(Siden krever vy bruker)
-
-
-
+link:https://vygruppen.atlassian.net/wiki/spaces/VyDev/pages/3636174855/Organisering+av+utvikling[Team Overview]::
+See which teams Vy have and who are a member of these teams.
+This is an internal resource, and requires a Vy user.
