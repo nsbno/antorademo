@@ -17,4 +17,7 @@ This service sends SIRI formatted ET and SX messages to active subscribers.
 xref:trafficinfo-reasoncodes::index.adoc[]::
 Microservice written in Micronaut, using SQS queue for messaging and Postgresql for persisting message records.
 
+xref:trafficinfo-trainroute::index.adoc[]::
+Trainroutes
+
 
