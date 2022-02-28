@@ -2,12 +2,14 @@
 
 What's a Token and what is it meant for?
 There is three types of tokens described in the OAuth2 and OpenID Connect standard, they have all different use cases described more in detail below for each token type.
+[square]
 * Access Token
 * ID Token
 * Refresh Token
 
 Format of a token
 Consist of three parts
+
 * Header of used crypto to verify signature
 * Payload with claims
 * Signatur to verify token data integrity
@@ -120,6 +122,8 @@ You can use the refresh token to retrieve new ID and access tokens. By default, 
 
 
 Reference
+
+[square]
 * Access token specification https://tools.ietf.org/html/rfc6749#section-1.4
 * Refresh Token specification https://tools.ietf.org/html/rfc6749#section-1.5
 * ID Token specification https://openid.net/specs/openid-connect-core-1_0.html#CodeIDToken
