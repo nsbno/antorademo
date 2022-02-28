@@ -1,0 +1,3 @@
+= Message Adapter for Utin
+
+This is a message adapter for Utin!

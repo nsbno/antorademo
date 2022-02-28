@@ -1,0 +1,4 @@
+= Services Demo
+
+This is just a demospace with some example services.
+In reality, these would live in the application repository.
