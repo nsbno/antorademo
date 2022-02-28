@@ -1,2 +1,2 @@
 * xref:ROOT:index.adoc[]
-* xref:ROOT:api.adoc[]
+* xref:ROOT:api.adoc[API Reference]
