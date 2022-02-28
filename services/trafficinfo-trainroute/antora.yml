@@ -1,0 +1,7 @@
+name: trafficinfo-trainroute
+version: ~
+
+title: Trafficinfo Trainroute
+
+nav:
+  - modules/ROOT/nav.adoc

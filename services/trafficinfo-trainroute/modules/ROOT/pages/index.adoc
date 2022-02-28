@@ -1,0 +1,3 @@
+= Message Adapter for Trafficinfo Trainroute
+
+This is a message adapter for Trafficinfo Trainroute!

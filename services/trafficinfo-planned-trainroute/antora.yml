@@ -1,0 +1,7 @@
+name: trafficinfo-utin-adapter
+version: ~
+
+title: Utin Adapter
+
+nav:
+  - modules/ROOT/nav.adoc
