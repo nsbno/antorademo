@@ -2,3 +2,6 @@ name: trafficinfo-reasoncodes
 version: ~
 
 title: Reason Codes
+
+nav:
+  - modules/ROOT/nav.adoc

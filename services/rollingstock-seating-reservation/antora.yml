@@ -2,3 +2,6 @@ name: rollingstock-seating-reservation
 version: ~
 
 title: Seating Reservation
+
+nav:
+  - modules/ROOT/nav.adoc

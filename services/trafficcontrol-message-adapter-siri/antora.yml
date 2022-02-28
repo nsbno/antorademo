@@ -2,3 +2,6 @@ name: trafficcontrol-message-adapter-siri
 version: ~
 
 title: Siri Adapter
+
+nav:
+  - modules/ROOT/nav.adoc
