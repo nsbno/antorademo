@@ -20,7 +20,7 @@ Used for
 * Authentication
 * Access to Resource Servers
 
-Access Token
+== Access Token
 The Access Token is meant for the client to provide a proof of that the current request has an authenticated user to the Resource Server. As such, the token is Completely opaque to clients and should not care about the contents of the token as it is only intended for the Resource Server. The Resource Server however can do whatever it want with the token. Its format and content, if any at all, is an implementation detail known by the creator of the token, and the receiving Resource Server. The client that retrieved the token should not need to parse or validate the token, it should be sent to the Resource Server to get access.
 The Access Token does not contain any information about the user except for the user ID (located in the sub claim), it also contains authorization information about the actions that the client is allowed to perform at the API (such permissions are referred to as scopes). If the calling service need to have some information about the current authenticated user it should request a ID Token in addition to the Access Token. For information about the user  profile, see the ID Token below.
 Treat the Access Token as temporary credentials to get access to a remote service, do not publish it, put on url paths and other stuff you wouldnt to with username and passwords.
@@ -81,7 +81,7 @@ exp is the expire time for the token.
 ....
 
 [.grid]
-ID Token
+== ID Token
 The id token is used to read information about the user, it could be thought of as the user profile of the user.
 It contains different user information about the user depending on the source of the user profile. For example if the user has been logged in by federated login to Google it could include fields like nickname, profile picture url, fullname and much more depending on what the user shares. It is not meant to be shared by any other application than the application that called /oauth/token endpoint to retrieve it, as can be seen by the "aud" field in the payload.
 
@@ -117,7 +117,7 @@ exp is the expire time for the token.
 
 
 
-Refresh Token
+== Refresh Token
 You can use the refresh token to retrieve new ID and access tokens. By default, the refresh token expires 30 days after your app user signs in to your user pool. When you create an app for your user pool, you can set the app's refresh token expiration to any value between 60 minutes and 10 years.
 
 
