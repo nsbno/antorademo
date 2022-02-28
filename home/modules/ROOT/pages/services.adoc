@@ -5,25 +5,25 @@ These are various services that exist in our org!
 == Directory
 
 [.grid]
-xref:trafficinfo-utin-adapter::index.adoc[]::
+xref:trafficinfo-utin-adapter::api.adoc[]::
 Utin Adapter
 
-xref:rollingstock-seating-reservation::index.adoc[]::
+xref:rollingstock-seating-reservation::api.adoc[]::
 Seat Reservations
 
-xref:trafficcontrol-message-adapter-siri::index.adoc[]::
+xref:trafficcontrol-message-adapter-siri::api.adoc[]::
 This service sends SIRI formatted ET and SX messages to active subscribers.
 
-xref:trafficinfo-reasoncodes::index.adoc[]::
+xref:trafficinfo-reasoncodes::api.adoc[]::
 Microservice written in Micronaut, using SQS queue for messaging and Postgresql for persisting message records.
 
-xref:trafficinfo-trainroute::index.adoc[]::
+xref:trafficinfo-trainroute::api.adoc[]::
 This project serves as a baseline when you wish to begin a new micro service exposing HTTP endpoints using Micronaut
 
-xref:trafficinfo-operating-trainroute::index.adoc[]::
+xref:trafficinfo-operating-trainroute::api.adoc[]::
 Microservice that provides current operating train route information about +-1 day of train routes and stops.
 
-xref:trafficinfo-planned-trainroute::index.adoc[]::
+xref:trafficinfo-planned-trainroute::api.adoc[]::
 Keeps a copy of the current trainplan (current term only)
 
 
