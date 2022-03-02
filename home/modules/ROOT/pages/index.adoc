@@ -28,3 +28,9 @@ This is an internal resource, and requires a Vy user.
 
 link:https://vygruppen.atlassian.net/wiki/spaces/INFRA/pages/6379864114/Service+Overview[Service Overview]::
 Service overview with details about ownership, contact information and service information
+
+link:https://grafana.common-services.vydev.io/d/3iL1YHtnk/pipeline-metrics-overview?orgId=1[DORA metrics]::
+Overview of release metrics inregards to service updates
+
+
+
