@@ -1,5 +1,4 @@
 = Authentication
-
 :toc: left
 
 What's a Token and what is it meant for?
