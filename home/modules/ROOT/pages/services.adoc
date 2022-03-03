@@ -4,7 +4,7 @@ These are various services that exist in our org!
 
 == Directory
 
-[.grid]
+[grid=none]
 xref:trafficinfo-utin-adapter::api.adoc[]::
 Utin Adapter
 
