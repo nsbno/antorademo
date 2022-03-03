@@ -1,4 +1,4 @@
 = API Reference
 :page-layout: swagger
-:page-swagger-url: https://689783162268-testpage.s3.eu-west-1.amazonaws.com/json/trafficinfo-operating-trainroute-v1_new-swagger.json
+:page-swagger-url: http://689783162268-testpage.s3.eu-west-1.amazonaws.com/json/trafficinfo-operating-trainroute-v1_new-swagger.json
 :reftext: {page-component-title}
