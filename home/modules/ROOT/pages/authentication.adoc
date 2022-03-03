@@ -1,5 +1,7 @@
 = Authentication
 
+:toc: left
+
 What's a Token and what is it meant for?
 There is three types of tokens described in the OAuth2 and OpenID Connect standard, they have all different use cases described more in detail below for each token type.
 
