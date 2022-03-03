@@ -14,7 +14,6 @@ Seat Reservations
 xref:trafficcontrol-message-adapter-siri::api.adoc[]::
 This service sends SIRI formatted ET and SX messages to active subscribers.
 
-[.grid]
 xref:trafficinfo-reasoncodes::api.adoc[]::
 Microservice written in Micronaut, using SQS queue for messaging and Postgresql for persisting message records.
 
@@ -24,7 +23,6 @@ This project serves as a baseline when you wish to begin a new micro service exp
 xref:trafficinfo-operating-trainroute::api.adoc[]::
 Microservice that provides current operating train route information about +-1 day of train routes and stops.
 
-[.grid]
 xref:trafficinfo-planned-trainroute::api.adoc[]::
 Keeps a copy of the current trainplan (current term only)
 
