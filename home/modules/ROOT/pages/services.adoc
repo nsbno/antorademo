@@ -4,19 +4,19 @@ These are various services that exist in our org!
 
 == Directory
 
-[grid=rows]
-xref:trafficinfo-utin-adapter::api.adoc[]:: Utin Adapter
+[frame=all, grid=rows]
+xref:trafficinfo-utin-adapter::api.adoc[]::, Utin Adapter
 
-xref:rollingstock-seating-reservation::api.adoc[]:: Seat Reservations
+xref:rollingstock-seating-reservation::api.adoc[]::, Seat Reservations
 
-xref:trafficcontrol-message-adapter-siri::api.adoc[]:: This service sends SIRI formatted ET and SX messages to active subscribers.
+xref:trafficcontrol-message-adapter-siri::api.adoc[]::, This service sends SIRI formatted ET and SX messages to active subscribers.
 
-xref:trafficinfo-reasoncodes::api.adoc[]:: Microservice written in Micronaut, using SQS queue for messaging and Postgresql for persisting message records.
+xref:trafficinfo-reasoncodes::api.adoc[]::, Microservice written in Micronaut, using SQS queue for messaging and Postgresql for persisting message records.
 
-xref:trafficinfo-trainroute::api.adoc[]:: This project serves as a baseline when you wish to begin a new micro service exposing HTTP endpoints using Micronaut
+xref:trafficinfo-trainroute::api.adoc[]::, This project serves as a baseline when you wish to begin a new micro service exposing HTTP endpoints using Micronaut
 
-xref:trafficinfo-operating-trainroute::api.adoc[]:: Microservice that provides current operating train route information about +-1 day of train routes and stops.
+xref:trafficinfo-operating-trainroute::api.adoc[]::, Microservice that provides current operating train route information about +-1 day of train routes and stops.
 
-xref:trafficinfo-planned-trainroute::api.adoc[]:: Keeps a copy of the current trainplan (current term only)
+xref:trafficinfo-planned-trainroute::api.adoc[]::, Keeps a copy of the current trainplan (current term only)
 
 
