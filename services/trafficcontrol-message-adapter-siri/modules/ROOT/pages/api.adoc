@@ -1,4 +1,4 @@
 = API Reference
 :page-layout: swagger
-:page-swagger-url: https://061938725231-infrademo-delegated-service-documentation.s3.eu-west-1.amazonaws.com/test/061938725231/infrademo-openapi.json
+:page-swagger-url: https://689783162268-testpage.s3.eu-west-1.amazonaws.com/json/infrademo-openapi.json
 :reftext: {page-component-title}
